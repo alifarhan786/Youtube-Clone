@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { SearchBar, VideoDetail , VideoList } from './components'
 import youtube from './api/youtube';
+import logo from './api/logo.png';
 class App extends React.Component {
     state ={
         videos:[],
@@ -37,7 +38,10 @@ class App extends React.Component {
             <Grid container spacing={10}>
                 <Grid item xs={12}>
                     <Grid container spacing={10}>
-                        <Grid item xs={12} >
+                        <Grid xs={2}>
+                         <img src={logo} alt='logo' width={200} height={100} style={{position: 'relative',left: '50px',top: '50px'}} /> 
+                        </Grid>
+                        <Grid item xs={10} >
                             <SearchBar onFormSubmit={this.handleSubmit} />
                         </Grid>
                         <Grid item xs={8}>
